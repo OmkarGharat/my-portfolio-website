@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Website of a Software Tester">
+    <title>Software Tester Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #0d6efd !important;
+        }
+
+        .section-heading {
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: #0d6efd;
+        }
+
+        .btn-primary {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#home">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="vh-100 d-flex align-items-center text-center bg-light">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Hello, I'm Omkar</h1>
+            <p class="lead">A Dedicated Software Tester</p>
+            <a href="#contact" class="btn btn-primary btn-lg">Contact Me</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container text-center">
+            <h2 class="section-heading">About Me</h2>
+            <p class="lead">
+                I am a passionate Software Tester with expertise in manual and automation testing.
+                I ensure the delivery of high-quality software products by identifying critical bugs,
+                improving test processes, and collaborating effectively with teams.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="section-heading">Skills</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="border p-4 rounded shadow-sm">
+                        <h4>Testing Tools</h4>
+                        <p>Selenium, JIRA, Postman, TestRail</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="border p-4 rounded shadow-sm">
+                        <h4>Programming Languages</h4>
+                        <p>Java, Python, SQL</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="border p-4 rounded shadow-sm">
+                        <h4>Testing Types</h4>
+                        <p>Manual, Automation, Performance, Regression</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-5">
+        <div class="container text-center">
+            <h2 class="section-heading">Certifications</h2>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">ISTQB Foundation Level (2023)</li>
+                <li class="list-group-item">Selenium WebDriver with Java (2023)</li>
+                <li class="list-group-item">Certified Agile Tester (2022)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="section-heading">Projects</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">E-commerce Website Testing</h5>
+                            <p class="card-text">Developed and executed automated test cases, identified bugs, and
+                                improved test cycle efficiency.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Inventory Management System</h5>
+                            <p class="card-text">Conducted regression and performance testing, reducing system downtime
+                                by 15%.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container text-center">
+            <h2 class="section-heading">Contact Me</h2>
+            <p class="lead">Feel free to reach out to me!</p>
+            <p>Email: <a href="mailto:your.email@example.com">omkargharat578@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn Profile</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-3">
+        <p>© 2025 Omkar Gharat. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
