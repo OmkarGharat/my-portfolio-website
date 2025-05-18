@@ -9,10 +9,12 @@ body {
 
 .section-heading {
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 20px;
     color: #0d6efd;
+    position: relative;
+    display: inline-block;
 }
 
 .btn-primary {
@@ -27,4 +29,93 @@ body {
 
 footer {
     background-color: #f8f9fa;
+}
+
+.nav-link.active {
+    position: relative;
+    color: #0d6efd;
+    /* Bootstrap primary color */
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #0d6efd;
+    /* Underline color */
+    animation: slide-in 0.3s ease-out;
+}
+
+@keyframes slide-in {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+/* Custom CSS for skills section */
+
+.section-heading:after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    bottom: -10px;
+    left: 25%;
+}
+
+.icon-box {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-item {
+    transition: transform 0.3s;
+    width: 80px;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Custom colors */
+.text-orange {
+    color: #FF6B35;
+}
+
+.text-blue {
+    color: #2563EB;
+}
+
+.text-red {
+    color: #DB2B39;
+}
+
+.text-yellow {
+    color: #FFD166;
+}
+
+.text-green {
+    color: #06D6A0;
+}
+
+.text-purple {
+    color: #8338EC;
+}
+
+.text-teal {
+    color: #118AB2;
+}
+
+.bg-purple {
+    background-color: #8338EC;
 }
