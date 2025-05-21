@@ -239,3 +239,38 @@ footer {
         left: 20px;
     }
 }
+
+/* Add to your style.css */
+#typing-text {
+    display: inline-block;
+    min-width: 150px;
+}
+
+/* Cursor animation */
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#typing-text:after {
+    content: "|";
+    animation: blink 1s infinite;
+    color: #007bff;
+}
+
+/* In your style.css */
+.btn-resume:hover {
+    /* background-color: #178846 !important; */
+     background-color: #a0128f !important; /* Darker shade of #c715ab */
+  transform: translateY(-2px);
+  /* box-shadow: 0 4px 12px rgba(199, 21, 171, 0.3); */
+}
