@@ -21,53 +21,58 @@
 
 <body>
     <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top"></nav>
-
-    <!-- <div id="home"></div> -->
     <section id="home" class="min-vh-100 d-flex align-items-center position-relative overflow-hidden"></section>
     <section id="about" class="py-5 bg-light"></section>
-    <div id="skills"></div>
     <section id="skills" class="py-5 bg-light"></section>
     <section id="certifications" class="py-5"></section>
     <section id="projects" class="py-5 bg-light"></section>
     <section id="contact" class="py-5"
         style="background: linear-gradient(to bottom, #f8f9fa, #e9ecef); min-height: 100vh;"></section>
-    <!-- <div id="footer"></div> -->
-
-    <script src="/Scripts/navbar.js" defer></script>
-    <script src="/Scripts/homeAnimation.js"></script>
-
+    <div id="footer"></div>
 
     <script>
-        // Function to load any HTML component
-        function loadComponent(id, file) {
-            fetch(`/components/${file}`)
-                .then(response => {
-                    if (!response.ok) throw new Error("Failed to load " + file);
-                    return response.text();
-                })
-                .then(data => {
-                    document.getElementById(id).innerHTML = data;
-                })
-                .catch(error => {
-                    console.error("Error loading component:", error);
-                });
-        }
+        // In your index.html's script section
+        document.addEventListener('DOMContentLoaded', function () {
+            function loadComponent(id, file) {
+                const element = document.getElementById(id);
+                if (!element) {
+                    console.error(`Element with ID ${id} not found`);
+                    return;
+                }
 
-        // Load multiple components
-        loadComponent('navbar', 'navbar.html');
-        loadComponent('home', 'home.html');
-        loadComponent('about', 'about.html');
-        loadComponent('skills', 'skills.html');
-        loadComponent('certifications', 'certifications.html');
-        loadComponent('projects', 'projects.html');
-        loadComponent('contact', 'contact.html');
-        loadComponent('footer', 'footer.html');
+                fetch(`/components/${file}`)
+                    .then(response => {
+                        if (!response.ok) throw new Error("Failed to load " + file);
+                        return response.text();
+                    })
+                    .then(data => {
+                        element.innerHTML = data;
+                        console.log(`Loaded ${file} into ${id}`);
+                    })
+                    .catch(error => {
+                        console.error("Error loading component:", error);
+                    });
+            }
+
+            // Load components
+            loadComponent('navbar', 'navbar.html');
+            loadComponent('home', 'home.html');
+            loadComponent('about', 'about.html');
+            loadComponent('skills', 'skills.html');
+            loadComponent('certifications', 'certifications.html');
+            loadComponent('projects', 'projects.html');
+            loadComponent('contact', 'contact.html');
+            loadComponent('footer', 'footer.html');
+        });
     </script>
 
+    <!-- <script src="/Scripts/homeAnimation.js"></script> -->
+
+
     <!-- Footer -->
-    <footer class="text-center py-3">
+    <!-- <footer class="text-center py-3">
         <p>© 2024 [Your Name]. All rights reserved.</p>
-    </footer>
+    </footer> -->
 
     <!-- Navbar -->
     <!-- Home Section -->
@@ -80,6 +85,10 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Scripts -->
+    <script src="/Scripts/navbar.js" defer></script>
+    <script src="/Scripts/homeAnimation.js" defer></script>
 </body>
 
 </html>
