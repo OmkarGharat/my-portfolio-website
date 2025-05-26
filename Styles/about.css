@@ -126,3 +126,24 @@
         padding: 20px;
     }
 }
+
+/* 
+.shadow-sm	{
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05) !important;
+} */
+
+/* NEW CSS  */
+
+/* ===== About Section CSS ===== */
+/* General container alignment */
+/* Optional override for max-width and padding */
+@media (max-width: 768px) {
+  .lead.fs-5 {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .list-group-item {
+    font-size: 1rem;
+  }
+}
