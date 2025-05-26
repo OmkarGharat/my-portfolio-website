@@ -270,7 +270,30 @@ footer {
 /* In your style.css */
 .btn-resume:hover {
     /* background-color: #178846 !important; */
-     background-color: #a0128f !important; /* Darker shade of #c715ab */
-  transform: translateY(-2px);
-  /* box-shadow: 0 4px 12px rgba(199, 21, 171, 0.3); */
+    background-color: #a0128f !important;
+    /* Darker shade of #c715ab */
+    transform: translateY(-2px);
+    /* box-shadow: 0 4px 12px rgba(199, 21, 171, 0.3); */
+}
+
+html,
+body {
+    overflow-x: hidden;
+    /* Prevents horizontal scroll */
+    height: 100%;
+    /* Ensures full document height */
+}
+
+/* Ensure sections are properly spaced */
+section {
+    /*position: relative;
+  z-index: 1;  Above background elements 
+  /* Full viewport height sections 
+  min-height: 100vh; 
+  scroll-margin-top: 80px; Adjust if you have fixed header */
+}
+
+body {
+    overflow: auto !important;
+    position: relative !important;
 }
