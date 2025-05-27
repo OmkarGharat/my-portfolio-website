@@ -147,3 +147,19 @@
     font-size: 1rem;
   }
 }
+
+.bg-light-green{
+    background-color: #4caf50 !important;
+}
+
+.border-light-green{
+    border-color: #4caf50 !important;
+}
+
+.text-light-green{
+    color: #4caf50 !important;
+}
+
+.shadow-smm{
+    box-shadow: 0 .3125rem .625rem 0 rgba(0, 0, 0, .12) !important;
+}
