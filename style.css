@@ -297,3 +297,37 @@ body {
     overflow: auto !important;
     position: relative !important;
 }
+
+/* * New Customized Buttons CSS */
+
+.btn-light-blue {
+    background-color: #1a73e8 !important;
+    /* text-decoration: ; */
+    box-shadow: 0 2px 2px 0 rgba(26, 115, 232, .1), 0 3px 1px -2px rgba(26, 115, 232, .18), 0 1px 5px 0 rgba(26, 115, 232, .1);
+
+    /* color: #0d6efd !important; */
+    /* border: 2px solid #0d6efd !important; */
+}
+
+.btn-light-blue:hover {
+    background-color: rgb(26, 115, 232);
+    box-shadow: rgba(26, 115, 232, 0.3) 0px 8px 14px -8px, rgba(26, 115, 232, 0.1) 0px 3px 18px 0px, rgba(26, 115, 232, 0.18) 0px 7px 8px -4px;
+    border-color: rgb(26, 115, 232);
+}
+
+.btn-light-green {
+    /* background-color: rgb(76, 175, 80) !important; */
+    background-color: #2dd55b !important;
+    color: #ffffff;
+}
+
+.btn-dark-green{
+    background-color: #1b8839 !important;
+    color: #ffffff;
+}
+
+.btn-light-green:hover {
+    background-color: rgb(76, 175, 80);
+    box-shadow: rgba(76, 175, 80, 0.3) 0px 8px 14px -8px, rgba(76, 175, 80, 0.1) 0px 3px 18px 0px, rgba(76, 175, 80, 0.18) 0px 7px 8px -4px;
+    border-color: rgb(76, 175, 80);
+}
