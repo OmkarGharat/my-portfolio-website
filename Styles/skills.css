@@ -40,26 +40,32 @@
     padding: 8px 14px;
     /* border-radius: 6px; */
     font-size: 0.95rem;
-    font-weight: 500;
+    /* font-weight: 500; */
     color: #ffffff;
     transition: all 0.3s ease;
     border: 0;
-    cursor: default;
+    cursor: pointer;
+    /* cursor: default; */
+    border-radius: 0.375rem;
+
 }
 
-.btn-primary {
+.btn-blue {
     background: #0056b3;
-    border-left: 4px solid #4aa1ff;
+    /* border-left: 4px solid #4aa1ff; */
     /* border-right: 4px solid #4aa1ff; */
 }
 
 .btn-dark-blue {
     /* background: #923e93 !important; */
     /* border-left: 4px solid #f94aff !important; */
-    border-radius: 0.375rem;
-    /* which is equal to 6px */
-
     background: #1c299c !important;
+    /* border-left: 4px solid #4aa1ff !important; */
+}
+
+.shade5{
+    /* color: #b6d7ff !important; */
+    background: #002170 !important;
     /* border-left: 4px solid #4aa1ff !important; */
 }
 
