@@ -10,7 +10,6 @@
     font-size: 2.2rem;
     font-weight: 700;
     text-align: center;
-    /* margin-bottom: 40px; */
 }
 
 .skills-group {
@@ -34,39 +33,32 @@
 
 .skills-tags li {
     background: #0056b3;
-    /* background: #0d6efd; */
-    /* border-left: 4px solid #0056b3; */
-    /* border-left: 4px solid #3366ff; */
     padding: 8px 14px;
-    /* border-radius: 6px; */
     font-size: 0.95rem;
     /* font-weight: 500; */
     color: #ffffff;
     transition: all 0.3s ease;
     border: 0;
     cursor: pointer;
-    /* cursor: default; */
     border-radius: 0.375rem;
 
 }
 
 .btn-blue {
     background: #0056b3;
-    /* border-left: 4px solid #4aa1ff; */
-    /* border-right: 4px solid #4aa1ff; */
 }
 
 .btn-dark-blue {
-    /* background: #923e93 !important; */
-    /* border-left: 4px solid #f94aff !important; */
     background: #1c299c !important;
-    /* border-left: 4px solid #4aa1ff !important; */
 }
 
-.btn-dark-blue-1{
-    /* color: #b6d7ff !important; */
-    background: #0051bf !important;
-    /* border-left: 4px solid #4aa1ff !important; */
+.btn-dark-blue-1 {
+    /* * Color Contrast Passed .. This color combination is Perfect */
+    /* * Change the name of the class. Since its not blue class */
+    /* Also, Check all 4 background and foreground colors to chatGPT and take its opinion that whether it looks good or not. If not then take its suggestions. Also try to make them from same color palette. */
+    background: #a11067 !important;
+    color: #fbf7e7;
+    font-weight: 500;
 }
 
 /*
