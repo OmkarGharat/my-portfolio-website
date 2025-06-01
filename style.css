@@ -1,5 +1,7 @@
 body {
     scroll-behavior: smooth;
+    /* background-color: #fafcfd   !important; */
+    background-color: #F9FAFB    !important;
 }
 
 .bg-light-blue {
@@ -287,68 +289,3 @@ body {
     overflow: auto !important;
     position: relative !important;
 }
-
-/* * New Customized Buttons CSS */
-
-.btn-light-blue {
-    /* background-color: #1a73e8 !important; */
-    /* * Color Contrast Passed .. This color combination is Perfect */
-    background-color: #29d4f9 !important;
-    color: #103840 !important;
-    font-weight: bold;
-    box-shadow: 0 2px 2px 0 rgba(26, 115, 232, .1), 0 3px 1px -2px rgba(26, 115, 232, .18), 0 1px 5px 0 rgba(26, 115, 232, .1);
-}
-
-.btn-light-blue:hover {
-    background-color: #1a73e8;
-    box-shadow: rgba(26, 115, 232, 0.3) 0px 8px 14px -8px, rgba(26, 115, 232, 0.1) 0px 3px 18px 0px, rgba(26, 115, 232, 0.18) 0px 7px 8px -4px;
-    border-color: rgb(26, 115, 232);
-}
-
-.btn-dark-blue-2 {
-    /* * Color Contrast Passed .. This color combination is Perfect */
-    background-color: #0e389e !important;
-    color: #ffffff;
-    font-weight: 500;
-    box-shadow: 0 2px 2px 0 rgba(13, 110, 253, .1), 0 3px 1px -2px rgba(13, 110, 253, .18), 0 1px 5px 0 rgba(13, 110, 253, .1);
-    border-color: #0e389e;
-}
-
-.btn-dark-blue-2:hover {
-    background-color: #0e389e;
-    box-shadow: rgba(26, 115, 232, 0.3) 0px 8px 14px -8px, rgba(26, 115, 232, 0.1) 0px 3px 18px 0px, rgba(26, 115, 232, 0.18) 0px 7px 8px -4px;
-    border-color: #0e389e;
-}
-
-.btn-dark-blue-3 {
-    background-color: #810099 !important;
-    color: #e8ee96;
-    box-shadow: 0 2px 2px 0 rgba(13, 110, 253, .1), 0 3px 1px -2px rgba(13, 110, 253, .18), 0 1px 5px 0 rgba(13, 110, 253, .1);
-    border-color: #001d7a;
-}
-
-.element {
-    transition: transform 310ms ease-out;
-}
-
-.element:hover {
-    transform: translate(0, -5px);
-}
-
-
-/* 
-.btn-light-green {
-    background-color: #2dd55b !important;
-    color: #ffffff;
-}
-
-.btn-dark-green{
-    background-color: #1b8839 !important;
-    color: #ffffff;
-}
-
-.btn-light-green:hover {
-    background-color: rgb(76, 175, 80);
-    box-shadow: rgba(76, 175, 80, 0.3) 0px 8px 14px -8px, rgba(76, 175, 80, 0.1) 0px 3px 18px 0px, rgba(76, 175, 80, 0.18) 0px 7px 8px -4px;
-    border-color: rgb(76, 175, 80);
-} */
