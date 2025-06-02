@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Website of a Software Tester">
+    <title>Software Tester Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
+        integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style src="/style.css"></style>
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #0d6efd !important;
+        }
+
+        .section-heading {
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: #0d6efd;
+        }
+
+        .btn-primary {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+        }
+
+        .nav-link.active {
+            position: relative;
+            color: #0d6efd;
+            /* Bootstrap primary color */
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #0d6efd;
+            /* Underline color */
+            animation: slide-in 0.3s ease-out;
+        }
+
+        @keyframes slide-in {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        /*--------------------*/
+
+        /* UX-optimized compact grid */
+        .skills-nexus {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .skills-compact {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+        }
+
+        /* Norman: Perceived affordances */
+        .skill-tile {
+            padding: 1rem;
+            border-radius: 8px;
+            background: white;
+            box-shadow:
+                0 1px 3px rgba(0, 0, 0, 0.05),
+                0 2px 6px rgba(0, 0, 0, 0.02);
+            transition: transform 0.2s ease;
+            border-left: 1px solid #dee2e6 !important;
+            border-right: 1px solid #dee2e6 !important;
+        }
+
+        .skill-tile:hover {
+            transform: translateY(-3px);
+            box-shadow:
+                0 4px 8px rgba(0, 0, 0, 0.08),
+                0 6px 12px rgba(0, 0, 0, 0.03);
+        }
+
+        /* Spool: Contextual hierarchy */
+        .skill-header h3 {
+            margin: 0 0 0.25rem 0;
+            font-size: 1.1rem;
+            color: #2c3e50;
+        }
+
+        .skill-microcopy {
+            margin: 0 0 0.75rem 0;
+            font-size: 0.75rem;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        /* Krug: Scannable lists */
+        .skill-badges {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .skill-badges li {
+            padding: 0.3rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Norman: Visual signifiers */
+        .skill-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: hsl(var(--hue), 80%, 50%);
+            margin-right: 0.5rem;
+        }
+
+        /* Color coding by type */
+        [data-skill-type="tools"] {
+            border-top: 4px solid #2ecc71;
+            border-bottom: 4px solid #2ecc71;
+        }
+
+        [data-skill-type="tech"] {
+            border-top: 4px solid #3498db;
+            border-bottom: 4px solid #3498db;
+        }
+
+        [data-skill-type="expertise"] {
+            border-top: 4px solid #9b59b6;
+            border-bottom: 4px solid #9b59b6;
+        }
+
+        [data-skill-type="soft"] {
+            border-top: 4px solid #e67e22;
+            border-bottom: 4px solid #e67e22;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .skills-compact {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certifications">Certifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <!-- <div class="underline"></div> -->
+            </div>
+        </div>
+    </nav>
+
+    <section class="skills-nexus mt-5" aria-labelledby="skills-title">
+        <div class="container mt-5">
+
+            <h2 id="skills-title" class="visually-hidden">QA Engineering Skills Matrix</h2>
+
+            <div class="skills-compact">
+                <!-- Row 1 -->
+                <article class="skill-tile" data-skill-type="tools">
+                    <div class="skill-header">
+                        <h3>🛠️ Tools</h3>
+                        <p class="skill-microcopy">My testing arsenal</p>
+                    </div>
+                    <ul class="skill-badges">
+                        <li><span class="skill-dot" style="--hue: 120"></span> Postman</li>
+                        <li><span class="skill-dot" style="--hue: 140"></span> Selenium</li>
+                        <li><span class="skill-dot" style="--hue: 160"></span> JIRA</li>
+                    </ul>
+                </article>
+
+                <article class="skill-tile" data-skill-type="tech">
+                    <div class="skill-header">
+                        <h3>💻 Tech</h3>
+                        <p class="skill-microcopy">Building blocks</p>
+                    </div>
+                    <ul class="skill-badges">
+                        <li><span class="skill-dot" style="--hue: 200"></span> Java</li>
+                        <li><span class="skill-dot" style="--hue: 220"></span> SQL</li>
+                        <li><span class="skill-dot" style="--hue: 240"></span> TestNG</li>
+                    </ul>
+                </article>
+
+                <!-- Row 2 -->
+                <article class="skill-tile" data-skill-type="expertise">
+                    <div class="skill-header">
+                        <h3>🔍 Expertise</h3>
+                        <p class="skill-microcopy">Where I excel</p>
+                    </div>
+                    <ul class="skill-badges">
+                        <li><span class="skill-dot" style="--hue: 280"></span> API Testing</li>
+                        <li><span class="skill-dot" style="--hue: 300"></span> Automation</li>
+                        <li><span class="skill-dot" style="--hue: 320"></span> Regression</li>
+                    </ul>
+                </article>
+
+                <article class="skill-tile" data-skill-type="soft">
+                    <div class="skill-header">
+                        <h3>🤝 Soft Skills</h3>
+                        <p class="skill-microcopy">Team dynamics</p>
+                    </div>
+                    <ul class="skill-badges">
+                        <li><span class="skill-dot" style="--hue: 360"></span> Communication</li>
+                        <li><span class="skill-dot" style="--hue: 20"></span> Detail-Oriented</li>
+                        <li><span class="skill-dot" style="--hue: 40"></span> Mentoring</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
