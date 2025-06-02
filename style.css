@@ -1,7 +1,8 @@
 body {
     scroll-behavior: smooth;
     /* background-color: #fafcfd   !important; */
-    background-color: #F9FAFB    !important;
+    /* background-color: #F9FAFB    !important; */
+    background-color: #fefeff    !important;
 }
 
 .bg-light-blue {
