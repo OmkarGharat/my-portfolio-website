@@ -1,55 +1,91 @@
-<!-- <section id="skills" class="skills-section"> -->
-    <div class="container mt-3">
-        <h2 class="section-title">What I Bring to the Table</h2>
+<!-- <section class="skills-dashboard mt-2" aria-labelledby="skills-heading"> -->
+<!-- <div class="container text-center mt-5"> -->
 
+<div class="container skills-header mt-5">
+    <!-- <h1 id="skills-heading" class="text-center">My Testing Skills</h1> -->
+    <h2 class="section-heading mb-4" style="left: 32.5pc;">Skills</h2>
+
+    <!-- <p class="skills-intro">As a QA Engineer, I combine <strong>technical precision</strong> with
+            <strong>user-focused validation</strong>. -->
+    <blockquote class="blockquote text-center">
+        <p>As a QA Engineer, I combine <strong>technical precision</strong> with
+            <strong>user-focused validation</strong>.
+        </p>
+    </blockquote>
+    </p>
+    </header>
+
+    <div class="skills-matrix d-flex">
         <!-- Testing Tools -->
-        <div class="skills-group">
-            <h3 class="skills-subtitle">🧪 Testing Toolkit</h3>
-            <ul class="skills-tags">
-                <li class="element btn-light-blue">Postman</li>
-                <li class="element btn-light-blue">Selenium WebDriver</li>
-                <li class="element btn-light-blue">JIRA</li>
-                <li class="element btn-light-blue">Confluence</li>
-                <li class="element btn-light-blue">Git & GitHub</li>
+        <article class="skill-card me-4" data-skill-type="tool" tabindex="0" aria-labelledby="tools-heading">
+            <h2 id="tools-heading">Tools</h2>
+            <p class="skill-context">Daily drivers for automation and tracking</p>
+            <ul class="skill-cloud" role="list">
+                <li><span class="skill-tag green" role="listitem"><i class="bi bi-check-circle-fill me-1"></i>
+                        Postman</span></li>
+                <li><span class="skill-tag green" role="listitem"><i class="bi bi-check-circle-fill me-1"></i>
+                        Jmeter</span></li>
+                <li><span class="skill-tag green" role="listitem"><i class="bi bi-check-circle-fill me-1"></i>
+                        Git and Github</span></li>
+                <li><span class="skill-tag green" role="listitem"><i class="bi bi-check-circle-fill me-1"></i>
+                        JIRA</span></li>
+                <li><span class="skill-tag green" role="listitem"><i class="bi bi-check-circle-fill me-1"></i>
+                        Confluence</span></li>
             </ul>
-        </div>
+        </article>
 
         <!-- Tech Stack -->
-        <div class="skills-group">
-            <h3 class="skills-subtitle">💻 Tech Stack</h3>
-            <ul class="skills-tags">
-                <li class="element btn-dark-blue-1">Java (Core)</li>
-                <li class="element btn-dark-blue-1">SQL</li>
-                <li class="element btn-dark-blue-1">VS Code</li>
-                <li class="element btn-dark-blue-1">TestNG</li>
-                <li class="element btn-dark-blue-1">Maven</li>
+        <article class="skill-card" data-skill-type="tech" tabindex="0" aria-labelledby="tech-heading">
+            <h2 id="tech-heading">Tech</h2>
+            <p class="skill-context">Foundation for test frameworks</p>
+            <ul class="skill-cloud" role="list">
+                <li><span class="skill-tag blue" role="listitem"><i class="bi bi-check-circle-fill me-1"></i>
+                        Java</span></li>
+                <li><span class="skill-tag blue" role="listitem"><i class="bi bi-check-circle-fill me-1"></i>
+                        Selenium</span></li>
+                <li><span class="skill-tag blue" role="listitem"><i class="bi bi-check-circle-fill me-1"></i>
+                        Maven</span></li>
+                <li><span class="skill-tag blue" role="listitem"><i class="bi bi-check-circle-fill me-1"></i>
+                        SQL</span></li>
             </ul>
-        </div>
+        </article>
 
         <!-- Testing Types -->
-        <div class="skills-group">
-            <h3 class="skills-subtitle">🧠 Testing Expertise</h3>
-            <ul class="skills-tags">
-                <li class="element btn-dark-blue-2">Manual Testing</li>
-                <li class="element btn-dark-blue-2">Automation Testing</li>
-                <li class="element btn-dark-blue-2">API Testing</li>
-                <li class="element btn-dark-blue-2">Performance Testing</li>
-                <li class="element btn-dark-blue-2">Regression Testing</li>
-                <li class="element btn-dark-blue-2">Functional Testing</li>
+        <article class="skill-card" data-skill-type="expertise" tabindex="0" aria-labelledby="expertise-heading">
+
+            <h2 id="expertise-heading">Specialties</h2>
+            <p class="skill-context">Where I add maximum value</p>
+            <ul class="skill-cloud" role="list">
+                <li><span class="skill-tag purple" role="listitem"><i class="bi bi-check-circle-fill me-1"></i>
+                        Automation</span></li>
+                <li><span class="skill-tag purple" role="listitem"><i class="bi bi-check-circle-fill me-1"></i>
+                        Functional</span></li>
+                <li><span class="skill-tag purple" role="listitem"><i class="bi bi-check-circle-fill me-1"></i> API
+                        Testing</span></li>
+                <li><span class="skill-tag purple" role="listitem"><i class="bi bi-check-circle-fill me-1"></i>
+                        Performance</span></li>
+                <li><span class="skill-tag purple" role="listitem"><i class="bi bi-check-circle-fill me-1"></i>
+                        Regression</span></li>
             </ul>
-        </div>
+        </article>
 
         <!-- Soft Skills -->
-        <div class="skills-group">
-            <h3 class="skills-subtitle">🧩 Soft Skills</h3>
-            <ul class="skills-tags">
-                <li class="element btn-dark-blue-3">Attention to Detail</li>
-                <li class="element btn-dark-blue-3">Team Collaboration</li>
-                <li class="element btn-dark-blue-3">Client Communication</li>
-                <li class="element btn-dark-blue-3">Ownership Attitude</li>
-                <li class="element btn-dark-blue-3">Quick Learner</li>
-                <li class="element btn-dark-blue-3">KT & Mentoring</li>
+        <article class="skill-card" data-skill-type="soft" tabindex="0" aria-labelledby="soft-heading">
+            <!-- <div class="skill-icon">
+                    <i class="bi bi-people" aria-hidden="true"></i>
+                </div> -->
+            <h2 id="soft-heading">Work Style</h2>
+            <p class="skill-context">Human side of QA</p>
+            <ul class="skill-cloud" role="list">
+                <li><span class="skill-tag orange" role="listitem"><i class="bi bi-check-circle-fill me-1"></i>
+                        Detail-Oriented</span></li>
+                <li><span class="skill-tag orange" role="listitem"><i class="bi bi-check-circle-fill me-1"></i>
+                        Communication</span></li>
+                <li><span class="skill-tag orange" role="listitem"><i class="bi bi-check-circle-fill me-1"></i>
+                        Mentoring</span></li>
+                <li><span class="skill-tag orange" role="listitem"><i class="bi bi-check-circle-fill me-1"></i>
+                        Quick Learner</span></li>
             </ul>
-        </div>
+        </article>
     </div>
-<!-- </section> -->
+    <!-- </section> -->
