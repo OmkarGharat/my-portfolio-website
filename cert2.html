@@ -179,6 +179,18 @@
             /* Orange - Agile */
         }
 
+        [data-certification-type="performance"] .certification-badge {
+            background-color: #9b59b6;
+            /* background-color: #e67e22; */
+            /* Orange - Performance */
+        }
+
+        [data-certification-type="agile"] .certification-badge {
+            background-color: #f39c12;
+            /* background-color: #e67e22; */
+            /* Orange - Performance */
+        }
+
         /* Krug: Clear Call-to-Action */
         .btn-view-all {
             transition: all 0.3s ease;
@@ -237,7 +249,7 @@
             cursor: default;
         }
 
-        .bg-testing {
+        /* .bg-testing {
             background-color: #3498db;
         }
 
@@ -255,7 +267,7 @@
 
         .bg-agile {
             background-color: #f39c12;
-        }
+        } */
     </style>
 </head>
 
@@ -326,7 +338,9 @@
                         </a>
                     </div>
                 </article>
-                <article class="certification-card" data-certification-type="" tabindex="0">
+
+                <!-- performance -->
+                <article class="certification-card" data-certification-type="performance" tabindex="0">
                     <div class="certification-badge">
                         <i class="bi bi-shield-check" aria-hidden="true"></i>
                     </div>
@@ -343,18 +357,37 @@
                         </a>
                     </div>
                 </article>
+
+                <!-- agile -->
+                <article class="certification-card" data-certification-type="agile" tabindex="0">
+                    <div class="certification-badge">
+                        <i class="bi bi-shield-check" aria-hidden="true"></i>
+                    </div>
+                    <div class="certification-body">
+                        <h3 class="h5 mb-2">Agile</h3>
+                        <div class="certification-meta">
+                            <span class="date"><i class="bi bi-calendar-check me-1"></i> March 2026</span>
+                            <span class="issuer"><i class="bi bi-building me-1"></i>Agile Tester</span>
+                        </div>
+                        <p class="certification-desc mt-2">Web UI test automation frameworks</p>
+                        <a href="#" class="certification-link" aria-label="View Selenium certification">
+                            <span>Verify Credential</span>
+                            <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
 
-    <div class="color-legend mb-4 border">
+    <!-- <div class="color-legend mb-4 border">
         <span class="badge bg-testing me-2">Testing</span>
         <span class="badge bg-api me-2">API</span>
         <span class="badge bg-automation me-2">Automation</span>
         <span class="badge bg-security me-2">Security</span>
         <span class="badge bg-agile me-2">Methodology</span>
-    </div>
+    </div> -->
 
 
 
