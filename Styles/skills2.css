@@ -1,0 +1,136 @@
+ /* Custom CSS for skills section */
+ /* UX-optimized styles */
+ :root {
+     --ux-orange: #FF6D00;
+     /* Attention (Norman's visibility) */
+     --ux-blue: #1565C0;
+     /* Trust (Spool's credibility) */
+     --ux-gray: #546E7A;
+     /* Readability (Krug's clarity) */
+     --ux-light: #ECEFF1;
+     /* Background */
+
+     /* WCAG-compliant palette */
+     --tool-bg: #E8F5E9;
+     /* Light green (AA contrast with dark text) */
+     --tool-text: #1B5E20;
+     --tech-bg: #E3F2FD;
+
+     /* Light blue */
+     --tech-text: #0D47A1;
+     --expertise-bg: #F3E5F5;
+
+     /* Light purple */
+     --expertise-text: #4A148C;
+     --soft-bg: #FFF3E0;
+
+     /* Light orange */
+     --soft-text: #E65100;
+ }
+
+ /* Norman: Make actions visible */
+ .skills-dashboard {
+     max-width: 1200px;
+     margin: 2rem auto;
+     padding: 2rem;
+     background: white;
+     border-radius: 8px;
+     /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); */
+ }
+
+ .skill-card {
+     padding: 1.5rem;
+     margin-bottom: 1.5rem;
+     margin-right: 1.5rem;
+     width: 260px;
+     border-radius: 8px;
+     transition: transform 0.3s ease;
+     border-left: 1px solid #dee2e6 !important;
+     border-right: 1px solid #dee2e6 !important;
+     border-bottom: 1px solid #baecc6 !important;
+ }
+
+ .skill-card:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+ }
+
+ ul {
+     list-style: none;
+     padding-left: 0 !important;
+ }
+
+ .skill-tag {
+     background-color: var(--bg-color);
+     color: var(--text-color);
+     padding: 0.4rem 0.9rem;
+     border-radius: 50px;
+     font-size: 0.85rem;
+     font-weight: 500;
+     display: inline-flex;
+     align-items: center;
+     border: 1px solid color-mix(in srgb, var(--text-color) 20%, transparent);
+     margin-bottom: 0.5rem;
+ }
+
+ /* Spool: Context matters */
+ .skill-context {
+     font-size: 0.85rem;
+     color: #7f8c8d;
+     margin-bottom: 1rem;
+     line-height: 1.4;
+     height: 2rem
+ }
+
+ /* Krug: Clear visual hierarchy */
+ h2 {
+     font-size: 1.6rem;
+     margin: 0 0 0.5rem 0;
+     color: #2c3e50;
+ }
+
+ /* Accessibility */
+ [data-skill-type="tool"] {
+     border-color: #2ecc71;
+ }
+
+ /* Green */
+ [data-skill-type="tool"] {
+     /* --bg-color: var(--tool-bg); */
+     --bg-color: #eefaf1;
+     --text-color: #126133;
+     border-top: 5px solid #2ecc71;
+     /* border-top: 4px solid var(--tool-text); */
+     border-bottom: 5px solid #2ecc71 !important;
+
+ }
+
+ [data-skill-type="tech"] {
+     --bg-color: #ecf5fc;
+     --text-color: #154a6d;
+     border-top: 5px solid #3498db;
+     border-bottom: 5px solid #3498db !important;
+ }
+
+ [data-skill-type="expertise"] {
+     --bg-color: var(--expertise-bg);
+     --text-color: var(--expertise-text);
+     border-top: 5px solid var(--expertise-text);
+     border-bottom: 5px solid var(--expertise-text) !important;
+ }
+
+ [data-skill-type="soft"] {
+     /* --bg-color: var(--soft-bg); */
+     --bg-color: #fff3e0;
+     --text-color: #923400;
+     /* --text-color: var(--soft-text); */
+     border-top: 5px solid var(--soft-text);
+     border-bottom: 5px solid var(--soft-text) !important;
+ }
+
+ /* Orange */
+
+ .visually-hidden {
+     position: absolute;
+     clip: rect(0 0 0 0);
+ }
