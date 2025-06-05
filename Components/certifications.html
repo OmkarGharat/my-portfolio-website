@@ -1,32 +1,71 @@
-<div class="container text-center mt-5">
-    <h2 class="section-heading mb-5">Certifications</h2>
-    <div class="row g-4 justify-content-center">
-        <!-- Certification 1 -->
-        <div class="col-md-4">
-            <div class="border p-4 rounded shadow-sm">
-                <h5>ISTQB Foundation Level</h5>
-                <p class="text-muted">Issued: June 2023</p>
-                <a href="https://example.com/istqb-certification" target="_blank" class="btn btn-primary btn-sm">View
-                    Certificate</a>
-            </div>
+<section id="certifications" class="certifications-nexus mt-4 py-4" aria-labelledby="certifications-heading">
+    <div class="container">
+        <header class="section-header text-center mb-5">
+            <h2 id="certifications-heading" class="display-5 fw-bold">My Credentials</h2>
+            <p class="lead">Validated expertise through industry-recognized certifications</p>
+        </header>
+
+        <div class="certification-grid">
+            <article class="certification-card" data-certification-type="testing" tabindex="0">
+                <div class="certification-badge">
+                    <i class="bi bi-award-fill" aria-hidden="true"></i>
+                </div>
+                <div class="certification-body">
+                    <h3 class="h5 mb-2">ISTQB Foundation Level</h3>
+                    <div class="certification-meta">
+                        <span class="date"><i class="bi bi-calendar-check me-1"></i> June 2026</span>
+                        <span class="issuer"><i class="bi bi-building me-1"></i> ISTQB</span>
+                    </div>
+                    <p class="certification-desc mt-2">Core software testing principles and methodologies</p>
+                    <a href="#" class="certification-link" aria-label="View ISTQB certification">
+                        <span>Verify Credential</span>
+                        <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="certification-card" data-certification-type="api" tabindex="0">
+                <div class="certification-badge">
+                    <i class="bi bi-patch-check-fill" aria-hidden="true"></i>
+                </div>
+                <div class="certification-body">
+                    <h3 class="h5 mb-2">Postman API Testing</h3>
+                    <div class="certification-meta">
+                        <span class="date"><i class="bi bi-calendar-check me-1"></i> Sept 2026</span>
+                        <span class="issuer"><i class="bi bi-building me-1"></i> Postman</span>
+                    </div>
+                    <p class="certification-desc mt-2">REST API testing and automation techniques</p>
+                    <a href="#" class="certification-link" aria-label="View Postman certification">
+                        <span>Verify Credential</span>
+                        <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="certification-card" data-certification-type="automation" tabindex="0">
+                <div class="certification-badge">
+                    <i class="bi bi-shield-check" aria-hidden="true"></i>
+                </div>
+                <div class="certification-body">
+                    <h3 class="h5 mb-2">Selenium Automation</h3>
+                    <div class="certification-meta">
+                        <span class="date"><i class="bi bi-calendar-check me-1"></i> March 2026</span>
+                        <span class="issuer"><i class="bi bi-building me-1"></i> Selenium HQ</span>
+                    </div>
+                    <p class="certification-desc mt-2">Web UI test automation frameworks</p>
+                    <a href="#" class="certification-link" aria-label="View Selenium certification">
+                        <span>Verify Credential</span>
+                        <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </article>
         </div>
-        <!-- Certification 2 -->
-        <div class="col-md-4">
-            <div class="border p-4 rounded shadow-sm">
-                <h5>Postman API Testing</h5>
-                <p class="text-muted">Issued: September 2022</p>
-                <a href="https://example.com/postman-certification" target="_blank" class="btn btn-primary btn-sm">View
-                    Certificate</a>
-            </div>
-        </div>
-        <!-- Certification 3 -->
-        <div class="col-md-4">
-            <div class="border p-4 rounded shadow-sm">
-                <h5>Automation with Selenium</h5>
-                <p class="text-muted">Issued: March 2023</p>
-                <a href="https://example.com/selenium-certification" target="_blank" class="btn btn-primary btn-sm">View
-                    Certificate</a>
-            </div>
+
+        <!-- Need to improve this button, specially its design and its css -->
+        <div class="text-center mt-4">
+            <a href="/cert2.html" class="btn btn-outline-primary btn-lg" aria-label="View all certifications">
+                <i class="bi bi-collection me-2"></i>View All Certifications
+            </a>
         </div>
     </div>
-</div>
+</section>
