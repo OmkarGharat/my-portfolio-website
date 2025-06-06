@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | QA Professional</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Playfair+Display:ital@1&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #3a7bd5;
+            --primary-light: #e3f2fd;
+            --secondary: #00d2ff;
+            --success: #4caf50;
+            --dark: #2c3e50;
+            --light: #f8f9fa;
+        }
+
+        body {
+            /* need to set font for heading and body as well */
+            /* for heading this font is good. */
+            /* font-family: 'Poppins', sans-serif; */
+
+        }
+
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        .hero-heading {
+            font-family: 'Poppins', serif;
+            /* font-style: italic; */
+            font-weight: 500;
+        }
+
+        .hero-paragraph {
+            font-family: system-ui, Roboto, Arial, sans-serif;
+        }
+
+        .quote-line {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+
+        /* About Section */
+        #about {
+            background-color: var(--light);
+            position: relative;
+            overflow: hidden;
+            padding: 5rem 0;
+        }
+
+        .section-heading {
+            position: relative;
+            display: inline-block;
+            color: var(--dark);
+        }
+
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+
+        .professional-tagline {
+            font-size: 1.25rem;
+            color: var(--dark);
+            font-weight: 500;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background-color: white;
+            border-radius: 50px;
+            display: inline-block;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Skill Cards */
+        .skill-card {
+            border-radius: 12px;
+            overflow: hidden;
+            border: none;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        .skill-card .card-header {
+            border-bottom: none;
+            padding: 1.25rem;
+            /* position: relative; */
+        }
+
+        .skill-card .card-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            /* background: linear-gradient(90deg, var(--primary), var(--secondary)); */
+        }
+
+        .skill-card.insurance .card-header {
+            background-color: var(--primary);
+        }
+
+        .skill-card.erp .card-header {
+            background-color: var(--success);
+        }
+
+        .skill-card .card-body {
+            padding: 1.5rem;
+            text-align: left;
+        }
+
+        p {
+            /* color: #9e9e9e; */
+        }
+
+        .achievement-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        .achievement-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.6;
+            cursor: context-menu
+        }
+
+        .achievement-list li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--success);
+        }
+
+        .cta-button {
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .professional-tagline {
+                font-size: 1rem;
+                padding: 0.5rem 1rem;
+            }
+
+            .skill-card .card-body {
+                padding: 1.25rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <!-- <div class="text-center mb-5 d-flex flex-column align-items-center">
+                <h2 class="section-heading display-5 fw-bold mb-4">About Me</h2>
+                <p class="professional-tagline">
+                    <i class="bi bi-patch-check-fill text-primary me-2"></i>
+                    QA Specialist | Automation Architect | Defect Prevention Expert
+                </p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <p class="lead fs-4 mb-5">
+                        I'm a <span class="text-primary fw-bold">Software Tester</span> with expertise in automating
+                        complex workflows for <span class="text-primary fw-bold">Insurance</span> and <span
+                            class="text-primary fw-bold">ERP</span> systems.
+                    </p>
+                </div>
+            </div> -->
+
+            <!-- <div class="text-center mb-5">
+                <p class="professional-tagline">
+                    <i class="bi bi-patch-check-fill text-primary me-2"></i>
+                    QA Specialist | Automation Architect | Defect Prevention Expert
+                </p>
+                <h2 class="section-heading display-5 fw-bold mb-4">Breaking Bugs, Building Confidence.</h2>
+                <p class="lead fs-4 mx-auto" style="max-width: 800px;">
+                    With a deep drive to <strong class="text-primary">challenge assumptions</strong> and <strong
+                        class="text-primary">break the unbreakable</strong>, I design test strategies that empower
+                    businesses across <strong class="text-primary">Insurance</strong> and <strong
+                        class="text-primary">ERP</strong> domains.
+                    <br><br>
+                    This isn't just testing—it's <em>engineering trust</em> into every release.
+                </p>
+            </div>
+
+            <div class="text-center mb-5">
+                <p class="professional-tagline">
+                    <i class="bi bi-patch-check-fill text-primary me-2"></i>
+                    QA Specialist | Automation Architect | Defect Prevention Expert
+                </p>
+
+                <h2 class="section-heading display-5 fw-bold mb-4">I don’t just test software — I test assumptions.</h2>
+
+                <p class="lead fs-4 mx-auto" style="max-width: 800px;">
+                    Every bug I find is a question answered, a flaw prevented, a promise kept.
+                    <br><br>
+                    From regulatory-heavy <strong class="text-primary">Insurance platforms</strong> to multi-module
+                    <strong class="text-primary">ERP systems</strong>,
+                    I design test strategies that do more than detect defects — they defend trust.
+                    <br><br>
+                    Because in a world of releases and rush, someone needs to slow down and ask:
+                    <em>“But what if it breaks?”</em>
+                    <br><br>
+                    That someone… is me.
+                </p>
+            </div> -->
+
+            <!-- <div class="text-center mb-5">
+                <p class="professional-tagline">
+                    <i class="bi bi-patch-check-fill text-primary me-2"></i>
+                    QA Specialist | Automation Architect | Defect Prevention Expert
+                </p>
+
+                <h2 class="section-heading display-5 fw-bold mb-4">
+                    Breaking Bugs. Defending Trust.
+                </h2>
+
+                <p class="lead fs-4 mx-auto" style="max-width: 800px;">
+                    I design test strategies that go beyond defect detection — they build confidence.
+                    <br><br>
+                    With deep expertise in <strong class="text-primary">Insurance</strong> and <strong
+                        class="text-primary">ERP</strong> systems,
+                    I automate the complex, uncover the hidden, and challenge what’s assumed to be “working.”
+                    <br><br>
+                    Every bug I find is a promise kept,
+                    every release I secure is a story of trust — delivered.
+                </p>
+
+            
+            </div> -->
+
+            <div class="text-center mb-5">
+                <!-- Tagline -->
+                <p class="professional-tagline">
+                    <i class="bi bi-patch-check-fill text-primary me-2"></i>
+                    QA Specialist | Automation Architect | Defect Prevention Expert
+                </p>
+
+                <!-- Hero Heading -->
+                <h2 class="hero-heading display-5 fw-bold mb-4">
+                    Breaking Bugs. <span class="text-primary">Defending Trust.</span>
+                </h2>
+
+                <!-- Descriptive Paragraph -->
+                <p class="lead fs-4 mx-auto hero-paragraph" style="max-width: 800px;">
+                    I design test strategies that go <strong class="fw-medium">beyond defect detection</strong> — they
+                    <em>build
+                        confidence</em>.
+                    <br><br>
+                    With deep expertise in <strong class="text-primary fw-medium">Insurance</strong> and <strong
+                        class="text-primary fw-medium">ERP</strong> systems,
+                    I <u>automate the complex</u>, <strong class="fw-medium">uncover the hidden</strong>, and
+                    <em>challenge what’s assumed
+                        to be <strong class="fw-medium">“working.”</strong></em>
+                    <br><br>
+                    Every bug I find is a <strong>promise kept</strong>,
+                    every release I secure is a <em class="text-success fw-medium">story of trust — delivered.</em>
+                </p>
+
+                <!-- Optional Impact Line -->
+                <!-- <p class="mt-4 quote-line text-muted">
+                    Because someone has to ask — <u><strong>“But what if it breaks?”</strong></u>
+                </p> -->
+            </div>
+
+
+            <!-- Skill Demonstration Cards -->
+            <div class="row g-4">
+                <!-- Insurance Testing Card -->
+                <div class="col-md-6">
+                    <div class="skill-card insurance shadow-sm h-100">
+                        <div class="card-header text-white">
+                            <h3 class="h5 mb-0">
+                                <i class="bi bi-shield-check me-2"></i>
+                                Insurance Testing Expertise
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <ul class="achievement-list">
+                                <li>Prevented <strong>200+ compliance violations</strong> in EU-regulated insurance
+                                    workflows</li>
+                                <li>Automated claims processing <strong>saving 120+ hours/month</strong></li>
+                                <li>Achieved <strong>99.98% defect-free releases</strong> for 2 consecutive years</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ERP Testing Card -->
+                <div class="col-md-6">
+                    <div class="skill-card erp shadow-sm h-100">
+                        <div class="card-header text-white">
+                            <h3 class="h5 mb-0">
+                                <i class="bi bi-diagram-3 me-2"></i>
+                                ERP System Mastery
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <ul class="achievement-list">
+                                <li>Guaranteed <strong>zero downtime</strong> during 7+ module upgrades</li>
+                                <li>Reduced testing cycles by <strong>30%</strong>, accelerating product launches</li>
+                                <li>Uncovered <strong>57 critical defects</strong> pre-launch (saving $850K+)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA to Work Journey -->
+            <div class="text-center mt-5">
+                <a href="#work-journey" class="cta-button btn btn-primary">
+                    <i class="bi bi-arrow-down-circle me-1"></i> View My Work Journey
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Journey Section (from previous redesign) would go here -->
+
+    <!-- Font Awesome for check icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
