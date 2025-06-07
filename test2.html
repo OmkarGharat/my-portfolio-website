@@ -22,31 +22,24 @@
             --light: #f8f9fa;
         }
 
-        body {
-            /* need to set font for heading and body as well */
-            /* for heading this font is good. */
-            /* font-family: 'Poppins', sans-serif; */
-
-        }
-
-        body {
-            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        }
-
         .hero-heading {
             font-family: 'Poppins', serif;
-            /* font-style: italic; */
             font-weight: 500;
         }
 
-        .hero-paragraph {
-            font-family: system-ui, Roboto, Arial, sans-serif;
-        }
+        /* h1,
+        h2,
+        h3, 
+        .hero-heading {
+            font-family: 'Poppins', sans-serif;
+        }*/
 
-        .quote-line {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-        }
+      /* Body Text */
+      body,
+      p,
+      span {
+          font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      }
 
         /* About Section */
         #about {
@@ -54,24 +47,6 @@
             position: relative;
             overflow: hidden;
             padding: 5rem 0;
-        }
-
-        .section-heading {
-            position: relative;
-            display: inline-block;
-            color: var(--dark);
-        }
-
-        .section-heading::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            bottom: -10px;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            border-radius: 2px;
         }
 
         .professional-tagline {
@@ -103,7 +78,6 @@
         .skill-card .card-header {
             border-bottom: none;
             padding: 1.25rem;
-            /* position: relative; */
         }
 
         .skill-card .card-header::after {
@@ -113,7 +87,6 @@
             left: 0;
             width: 100%;
             height: 4px;
-            /* background: linear-gradient(90deg, var(--primary), var(--secondary)); */
         }
 
         .skill-card.insurance .card-header {
@@ -127,10 +100,6 @@
         .skill-card .card-body {
             padding: 1.5rem;
             text-align: left;
-        }
-
-        p {
-            /* color: #9e9e9e; */
         }
 
         .achievement-list {
@@ -281,27 +250,19 @@
                 </h2>
 
                 <!-- Descriptive Paragraph -->
+                <!-- This paragraph is designed to be more impactful and concise -->
                 <p class="lead fs-4 mx-auto hero-paragraph" style="max-width: 800px;">
-                    I design test strategies that go <strong class="fw-medium">beyond defect detection</strong> — they
-                    <em>build
-                        confidence</em>.
+                    I design test strategies that go <strong>beyond defect detection</strong> — they build confidence.
                     <br><br>
-                    With deep expertise in <strong class="text-primary fw-medium">Insurance</strong> and <strong
-                        class="text-primary fw-medium">ERP</strong> systems,
-                    I <u>automate the complex</u>, <strong class="fw-medium">uncover the hidden</strong>, and
-                    <em>challenge what’s assumed
-                        to be <strong class="fw-medium">“working.”</strong></em>
+                    With deep expertise in <span class="text-primary fw-medium">Insurance</span> and
+                    <span class="text-primary fw-medium">ERP</span> systems,
+                    I <em>automate the complex</em>, <strong>uncover the hidden</strong>, and
+                    challenge what’s assumed to be <strong><em>working</em></strong>.
                     <br><br>
                     Every bug I find is a <strong>promise kept</strong>,
-                    every release I secure is a <em class="text-success fw-medium">story of trust — delivered.</em>
+                    every release I secure is a <span class="text-success fw-medium">story of trust — delivered.</span>
                 </p>
-
-                <!-- Optional Impact Line -->
-                <!-- <p class="mt-4 quote-line text-muted">
-                    Because someone has to ask — <u><strong>“But what if it breaks?”</strong></u>
-                </p> -->
             </div>
-
 
             <!-- Skill Demonstration Cards -->
             <div class="row g-4">
