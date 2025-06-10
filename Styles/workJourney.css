@@ -1,0 +1,281 @@
+/* ===== WORK JOURNEY SECTION ===== */
+#work-journey {
+    padding: 5rem 0;
+    background-color: #f8fafc;
+    position: relative;
+}
+
+/* Header - Krug's Minimalism */
+.journey-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.journey-header h2 {
+    font-size: 2.1rem;
+    color: #1e293b;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.journey-header .lead {
+    color: #64748b;
+    font-size: 1.15rem;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+}
+
+/* Timeline - Norman's Structure */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    /* Increased from 800px */
+    width: clamp(700px, 60vw, 900px);
+    /* Fluid scaling with constraints */
+    margin: 0 auto;
+    padding-bottom: 25px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 41px;
+    top: 15px;
+    bottom: 15px;
+    width: 2px;
+    background: linear-gradient(to bottom, #e2e8f0 0%, #cbd5e1 50%, #e2e8f0 100%);
+}
+
+.timeline::after {
+    content: "";
+    position: absolute;
+    left: 37px;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #3b82f6;
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px #3b82f6;
+    z-index: 3;
+}
+
+/* Job Cards - Spool's Contextual Design */
+.job-card {
+    display: flex;
+    gap: 1.75rem;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-left: 85px;
+}
+
+.job-card:last-child {
+    margin-bottom: 0;
+}
+
+/* Current Job - Norman's Emphasis */
+.current-job .job-badge {
+    background: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+    transform: scale(1.05);
+}
+
+.current-job .job-content {
+    border-left: 4px solid #3b82f6;
+    box-shadow: 0 3px 12px rgba(59, 130, 246, 0.18);
+}
+
+.current-position {
+    position: absolute;
+    top: -12px;
+    left: 95px;
+    background: #3b82f6;
+    color: white;
+    padding: 0.2rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 2;
+    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+}
+
+/* Previous Jobs - Spool's Differentiation */
+.job-card:not(.current-job) .job-content {
+    border-left: 4px solid #94a3b8;
+    /* Past job indicator */
+    box-shadow: 0 3px 10px rgba(148, 163, 184, 0.15);
+}
+
+.job-card:not(.current-job) .job-badge {
+    color: #94a3b8;
+    border-color: #e2e8f0;
+}
+
+/* Job Badge - Krug's Consistency */
+.job-badge {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    border: 2px solid;
+    position: absolute;
+    left: 13px;
+    z-index: 2;
+    transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Job Content - Norman's Feedback */
+.job-content {
+    max-width: 720px;
+    /* Prevents lines > 75 characters */
+    background: white;
+    border-radius: 10px;
+    padding: 1.75rem;
+    flex-grow: 1;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effects - All Experts' Agreement */
+.job-card:hover .job-badge {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.current-job:hover .job-badge {
+    box-shadow: 0 4px 14px rgba(59, 130, 246, 0.3);
+}
+
+.job-card:hover .job-content {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.current-job:hover .job-content {
+    box-shadow: 0 8px 28px rgba(59, 130, 246, 0.22);
+}
+
+/* Job Header - Spool's Hierarchy */
+.job-header {
+    margin-bottom: 1.25rem;
+}
+
+.job-header h3 {
+    font-size: 1.3rem;
+    color: #1e293b;
+    margin-bottom: 0.3rem;
+    /* font-weight: 650; */
+}
+
+.company {
+    font-weight: 520;
+    color: #3b82f6;
+    margin-right: 0.8rem;
+}
+
+.current-job .company {
+    font-weight: 550;
+}
+
+.duration {
+    color: #64748b;
+    font-size: 0.88rem;
+    letter-spacing: 0.2px;
+}
+
+/* Achievements List - Krug's Scannability */
+.job-achievements {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.job-achievements li {
+    position: relative;
+    padding-left: 1.7rem;
+    margin-bottom: 0.65rem;
+    line-height: 1.6;
+    color: #334155;
+    transition: transform 0.3s ease;
+}
+
+.job-achievements li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #3b82f6;
+    font-weight: bold;
+}
+
+/* Resume Button - Norman's Call-to-Action */
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.75rem 1.5rem;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 520;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.25);
+    font-size: 1.05rem;
+}
+
+.resume-btn:hover {
+    background: #2563eb;
+    /* transform: translateY(-2px) scale(1.02); */
+    box-shadow: 0 6px 14px rgba(59, 130, 246, 0.35);
+}
+
+/* Responsive Design - All Experts' Mobile-first */
+@media (max-width: 768px) {
+
+    .timeline {
+        max-width: 100%;
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .job-content {
+        max-width: 100%;
+    }
+
+    .timeline::before {
+        left: 29px;
+        top: 10px;
+    }
+
+    .timeline::after {
+        left: 25px;
+    }
+
+    .job-card {
+        padding-left: 72px;
+        margin-bottom: 2.5rem;
+    }
+
+    .job-badge {
+        width: 50px;
+        height: 50px;
+        left: 5px;
+    }
+
+    .current-position {
+        left: 72px;
+        top: -10px;
+    }
+
+    .job-content {
+        padding: 1.5rem;
+    }
+}
