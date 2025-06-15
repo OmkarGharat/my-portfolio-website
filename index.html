@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/Styles/skills.css">
     <link rel="stylesheet" href="/Styles/skills2.css">
     <link rel="stylesheet" href="/Styles/certifications.css">
+    <link rel="stylesheet" href="/Styles/newProjects.css">
 </head>
 
 <body>
@@ -29,8 +30,10 @@
     <section id="about" class="min-vh-100 bg-light py-5"></section>
     <section id="workJourney" class="py-5"></section>
     <section id="skills" class="skills-dashboard min-vh-100 py-5" aria-labelledby="skills-heading"></section>
-    <section id="certifications" class="min-vh-100 py-5"></section>
-    <section id="projects" class="py-5 bg-light"></section>
+    <section id="certifications" class="min-vh-100 certifications-nexus py-5" aria-labelledby="certifications-heading">
+    </section>
+    <section id="newProjects" class="projects-section min-vh-100 bg-light"></section>
+    <!-- <section id="projects" class="py-5 bg-light"></section> -->
     <section id="contact" class="py-5"
         style="background: linear-gradient(to bottom, #f8f9fa, #e9ecef); min-height: 100vh;"></section>
     <div id="footer"></div>
@@ -66,7 +69,7 @@
             loadComponent('workJourney', 'workJourney.html');
             loadComponent('skills', 'skills.html');
             loadComponent('certifications', 'certifications.html');
-            loadComponent('projects', 'projects.html');
+            loadComponent('newProjects', 'newProjects.html');
             loadComponent('contact', 'contact.html');
             loadComponent('footer', 'footer.html');
         });
