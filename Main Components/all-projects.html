@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Testing Projects</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/Styles/newProjects.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #34495e;
+            --accent: #3498db;
+            --erp-color: #3498db;
+            --insurance-color: #27ae60;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+
+        /* body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: var(--dark);
+        }
+
+        .projects-section {
+            padding: 60px 0;
+        }
+
+        .main-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .main-subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+
+        .section-divider {
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            margin: 0 auto 40px;
+            border-radius: 2px;
+        } */
+
+        /* Back button styles */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn i {
+            margin-right: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            color: #2980b9;
+        }
+
+        .back-btn:hover i {
+            transform: translateX(-5px);
+        }
+
+        /* Filter controls */
+        .filter-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+
+        .filter-title {
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 500;
+            border: 2px solid #e0e0e0;
+            background: white;
+            color: var(--secondary);
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: white;
+        }
+
+        .filter-btn.erp.active {
+            border-color: var(--erp-color);
+            background: var(--erp-color);
+        }
+
+        .filter-btn.insurance.active {
+            border-color: var(--insurance-color);
+            background: var(--insurance-color);
+        }
+
+        /* Project counter */
+        .project-counter {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        /* Project cards (same as main page) */
+        /* .project-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: none;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border-top: 4px solid var(--erp-color);
+        }
+
+        .project-card.insurance {
+            border-top-color: var(--insurance-color);
+        } 
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        .project-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .project-app {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            background: var(--erp-color);
+        }
+
+        .project-app.insurance {
+            background: var(--insurance-color);
+        }
+
+        .project-desc {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .tech-badge {
+            display: inline-block;
+            background: #e0e0e0;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-right: 8px;
+            margin-bottom: 10px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .modules-section {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .modules-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .module-item {
+            display: inline-block;
+            font-size: 0.85rem;
+            color: #666;
+            margin-right: 10px;
+            margin-bottom: 8px;
+        }
+
+        .module-item:after {
+            content: "•";
+            margin-left: 10px;
+            color: #ccc;
+        }
+
+        .module-item:last-child:after {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2rem;
+            }
+
+            .main-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .filter-buttons {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }*/
+    </style>
+</head>
+
+<body>
+    <section class="projects-section">
+        <div class="container">
+            <a href="/index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+
+            <div class="text-center mb-5">
+                <h1 class="main-title">All Testing Projects</h1>
+                <p class="main-subtitle">Complete collection of my ERP and insurance application testing projects</p>
+                <div class="section-divider"></div>
+            </div>
+
+            <!-- Filter Controls -->
+            <div class="filter-container">
+                <h5 class="filter-title">Filter Projects:</h5>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn erp" data-filter="ERP">ERP Projects</button>
+                    <button class="filter-btn insurance" data-filter="Insurance">Insurance Projects</button>
+                </div>
+            </div>
+
+            <div class="project-counter">Showing 8 projects</div>
+
+            <div class="row" id="projects-container">
+                <!-- ERP Projects -->
+                <div class="col-lg-6 mb-4" data-category="ERP">
+                    <div class="project-card">
+                        <div class="card-body">
+                            <span class="project-app">Milestone Lite ERP</span>
+                            <h3 class="project-name">PO to AutoGRN Workflow</h3>
+                            <p class="project-desc">
+                                End-to-end testing of purchase order to goods receipt automation, validating inventory
+                                updates, accounting entries, and vendor communication.
+                            </p>
+                            <div>
+                                <span class="tech-badge" data-type="ERP">Inventory Management</span>
+                                <span class="tech-badge" data-type="ERP">AP Module</span>
+                                <span class="tech-badge" data-type="ERP">Data Validation</span>
+                            </div>
+                            <div class="modules-section">
+                                <div class="modules-title">Modules Involved</div>
+                                <div>
+                                    <span class="module-item">Accounts Payable</span>
+                                    <span class="module-item">Inventory</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4" data-category="ERP">
+                    <div class="project-card">
+                        <div class="card-body">
+                            <span class="project-app">Milestone Lite ERP</span>
+                            <h3 class="project-name">Dealer SO to PO Conversion</h3>
+                            <p class="project-desc">
+                                Verified automated conversion of dealer sales orders to purchase orders with correct
+                                pricing, quantities, and vendor assignments.
+                            </p>
+                            <div>
+                                <span class="tech-badge" data-type="ERP">Sales Order</span>
+                                <span class="tech-badge" data-type="ERP">Purchase Order</span>
+                                <span class="tech-badge" data-type="ERP">Pricing Logic</span>
+                            </div>
+                            <div class="modules-section">
+                                <div class="modules-title">Modules Involved</div>
+                                <div>
+                                    <span class="module-item">Accounts Receivable</span>
+                                    <span class="module-item">Accounts Payable</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Insurance Projects -->
+                <div class="col-lg-6 mb-4" data-category="Insurance">
+                    <div class="project-card insurance">
+                        <div class="card-body">
+                            <span class="project-app insurance">Easy Insurance</span>
+                            <h3 class="project-name">Policy Management System</h3>
+                            <p class="project-desc">
+                                Comprehensive testing of policy creation, renewal, and claims processing workflows in
+                                the Easy insurance agent application.
+                            </p>
+                            <div>
+                                <span class="tech-badge" data-type="Insurance">Policy Creation</span>
+                                <span class="tech-badge" data-type="Insurance">Renewals</span>
+                                <span class="tech-badge" data-type="Insurance">Claims Processing</span>
+                            </div>
+                            <div class="modules-section">
+                                <div class="modules-title">Components Tested</div>
+                                <div>
+                                    <span class="module-item">Policy Engine</span>
+                                    <span class="module-item">Customer Portal</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more projects here following the same structure -->
+                <div class="col-lg-6 mb-4" data-category="ERP">
+                    <div class="project-card">
+                        <div class="card-body">
+                            <span class="project-app">Milestone Lite ERP</span>
+                            <h3 class="project-name">Shopify Excel Upload</h3>
+                            <p class="project-desc">
+                                Tested Excel import functionality that creates sales orders from Shopify data,
+                                validating product mapping, customer data, and order totals.
+                            </p>
+                            <div>
+                                <span class="tech-badge" data-type="ERP">Data Import</span>
+                                <span class="tech-badge" data-type="ERP">Excel Validation</span>
+                                <span class="tech-badge" data-type="ERP">Order Creation</span>
+                            </div>
+                            <div class="modules-section">
+                                <div class="modules-title">Modules Involved</div>
+                                <div>
+                                    <span class="module-item">Accounts Receivable</span>
+                                    <span class="module-item">Inventory</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4" data-category="ERP">
+                    <div class="project-card">
+                        <div class="card-body">
+                            <span class="project-app">Milestone Lite ERP</span>
+                            <h3 class="project-name">PickList to AutoDO</h3>
+                            <p class="project-desc">
+                                Verified automated delivery order generation from pick lists, ensuring correct item
+                                allocation, batch selection, and shipping documentation.
+                            </p>
+                            <div>
+                                <span class="tech-badge">Inventory</span>
+                                <span class="tech-badge">Shipping</span>
+                                <span class="tech-badge">Batch Tracking</span>
+                            </div>
+                            <div class="modules-section">
+                                <div class="modules-title">Modules Involved</div>
+                                <div>
+                                    <span class="module-item">Inventory</span>
+                                    <span class="module-item">Shipping</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4" data-category="ERP">
+                    <div class="project-card">
+                        <div class="card-body">
+                            <span class="project-app">Milestone Lite ERP</span>
+                            <h3 class="project-name">GRN Quality Check to Auto Purchase Return</h3>
+                            <p class="project-desc">
+                                Tested quality inspection workflow that automatically generates purchase returns for
+                                defective items, updating inventory and vendor accounts.
+                            </p>
+                            <div>
+                                <span class="tech-badge">Quality Control</span>
+                                <span class="tech-badge">Returns</span>
+                                <span class="tech-badge">Vendor Management</span>
+                            </div>
+                            <div class="modules-section">
+                                <div class="modules-title">Modules Involved</div>
+                                <div>
+                                    <span class="module-item">Accounts Payable</span>
+                                    <span class="module-item">Inventory</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4" data-category="ERP">
+                    <div class="project-card">
+                        <div class="card-body">
+                            <span class="project-app">Milestone Lite ERP</span>
+                            <h3 class="project-name">WayTrack API to JSON Integration</h3>
+                            <p class="project-desc">
+                                Validated API integration with WayTrack logistics system, ensuring accurate JSON data
+                                transformation and real-time shipment status updates.
+                            </p>
+                            <div>
+                                <span class="tech-badge">API Testing</span>
+                                <span class="tech-badge">JSON</span>
+                                <span class="tech-badge">Integration</span>
+                            </div>
+                            <div class="modules-section">
+                                <div class="modules-title">Modules Involved</div>
+                                <div>
+                                    <span class="module-item">Shipping</span>
+                                    <span class="module-item">Integration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4" data-category="Insurance">
+                    <div class="project-card insurance">
+                        <div class="card-body">
+                            <span class="project-app insurance">Easy Insurance</span>
+                            <h3 class="project-name">Commission Calculation Engine</h3>
+                            <p class="project-desc">
+                                Verified complex commission calculations for insurance agents based on policy types,
+                                tenure, and performance tiers.
+                            </p>
+                            <div>
+                                <span class="tech-badge" data-type="Insurance">Calculations</span>
+                                <span class="tech-badge" data-type="Insurance">Commission Rules</span>
+                                <span class="tech-badge" data-type="Insurance">Financial Validation</span>
+                            </div>
+                            <div class="modules-section">
+                                <div class="modules-title">Components Tested</div>
+                                <div>
+                                    <span class="module-item">Commission Module</span>
+                                    <span class="module-item">Financial Reports</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projects = document.querySelectorAll('[data-category]');
+            const projectCounter = document.querySelector('.project-counter');
+            const totalProjects = projects.length;
+
+            // Update project counter
+            function updateCounter(filter) {
+                if (filter === 'all') {
+                    projectCounter.textContent = `Showing ${totalProjects} Projects`;
+                } else {
+                    const filteredCount = document.querySelectorAll(`[data-category="${filter}"]`).length;
+                    projectCounter.textContent = `Showing ${filteredCount} ${filter} Projects`;
+                }
+            }
+
+            // Initialize counter
+            updateCounter('all');
+
+            // Filter functionality
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    const filter = this.getAttribute('data-filter');
+
+                    projects.forEach(project => {
+                        if (filter === 'all' || project.getAttribute('data-category') === filter) {
+                            project.style.display = 'block';
+                        } else {
+                            project.style.display = 'none';
+                        }
+                    });
+
+                    // Update counter
+                    updateCounter(filter);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
