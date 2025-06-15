@@ -1,10 +1,8 @@
-/* About Section Styling */
 #about {
     position: relative;
     overflow: hidden;
 }
 
-/* Section Heading */
 #about .underline {
     width: 80px;
     height: 4px;
@@ -13,7 +11,6 @@
     border-radius: 2px;
 }
 
-/* Timeline Styling */
 .timeline {
     position: relative;
     padding-left: 50px;
@@ -93,7 +90,6 @@
     top: 4px;
 }
 
-/* Animation */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -106,7 +102,6 @@
     }
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
     .timeline {
         padding-left: 30px;
@@ -127,16 +122,6 @@
     }
 }
 
-/* 
-.shadow-sm	{
-    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05) !important;
-} */
-
-/* NEW CSS  */
-
-/* ===== About Section CSS ===== */
-/* General container alignment */
-/* Optional override for max-width and padding */
 @media (max-width: 768px) {
   .lead.fs-5 {
     font-size: 1.1rem;
